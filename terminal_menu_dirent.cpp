@@ -97,7 +97,7 @@ std::vector<std::string> file_name_list_in_directory( const std::string& path_to
 
           if(relative_filename != "." && relative_filename != ".."){
               count++;
-              relative_filename = "../Logs/" + relative_filename;
+              relative_filename = "/home/pi/drone/logs/px4/" + relative_filename;
               list_filenames_in_directory.push_back(relative_filename);
               //std::cout << "The relative filename is : " << relative_filename << "\n";
           }
@@ -132,7 +132,7 @@ std::vector<std::string> file_name_list_in_directory( const std::string& path_to
 // entry.date format : 2021-09-23T16:47:36Z
 // str.substr (pos,len), pos : Position of the first character to be copied as a substring. len : Number of characters to include in the substring
 std::string convert_entry_to_filepath_format(std::string id, std::string date){
-    std::string file_stream_in_format = "../Logs/log_" + id + "_" + date.substr(0,10) + "-" + date.substr(11,2) + "-" + date.substr(14,2) + "-" + date.substr(17,2) + ".ulg";
+    std::string file_stream_in_format = "/home/pi/drone/logs/px4/log_" + id + "_" + date.substr(0,10) + "-" + date.substr(11,2) + "-" + date.substr(14,2) + "-" + date.substr(17,2) + ".ulg";
 
     return file_stream_in_format;
 }
@@ -239,7 +239,11 @@ int main(int argc, char** argv)
 // ========================= DOWNLOAD LOGS, TERMINAL MENU ==============================================================      
 
     auto log_files = std::make_shared<LogFiles>(system);
-    log_download_patate(log_files);
+
+    if(!_armed){
+        log_download_patate(log_files);
+    }
+    
 
     std::cout << "Finished...\n";
 
@@ -366,7 +370,7 @@ void log_download_entry_list(std::vector<LogFiles::Entry> entry_list_to_download
 
     bool is_in_the_list = false;
     bool incomplete_entry_downloaded = false;
-    std::string path = "../Logs";
+    std::string path = "/home/pi/drone/logs/px4/";
     uint32_t existing_log_size_bytes;
 
     /*
@@ -408,6 +412,7 @@ void log_download_entry_list(std::vector<LogFiles::Entry> entry_list_to_download
                             std::cout << "An incomplet log download has benn found. Restarting the download of this log.";
                         }else{
                             std::cout << "Log is complete \n";
+                            incomplete_entry_downloaded = false;
                         }
                     }
                     
