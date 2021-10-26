@@ -1,0 +1,3 @@
+/home/pi/getLog/download_log_auto/build/CMakeFiles/rebuild_cache.dir
+/home/pi/getLog/download_log_auto/build/CMakeFiles/download_log_auto.dir
+/home/pi/getLog/download_log_auto/build/CMakeFiles/edit_cache.dir
