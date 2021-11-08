@@ -131,68 +131,24 @@ int main(int argc, char** argv)
         return 1;
     }
 
-    
     // Instantiate pluginis.
+    auto log_files = std::make_shared<LogFiles>(system);
+
+    /*
     auto telemetry = Telemetry{system};
     auto action = Action{system};
-    //auto log_files = LogFiles{system};
-
-    // We want to listen to the altitude of the drone at 1 Hz.
-    const auto set_rate_result = telemetry.set_rate_position(1.0);
-    if (set_rate_result != Telemetry::Result::Success) {
-        std::cerr << "Setting rate failed: " << set_rate_result << '\n';
-        return 1;
-    }
-
     
-
-    // Set up callback to monitor altitude while the vehicle is in flight
-    telemetry.subscribe_position([&](Telemetry::Position position) {
-        if(_armed)
-            std::cout << "Altitude: " << position.relative_altitude_m << " m\n";
-    });
-
-    // void mavsdk::Telemetry::subscribe_armed(ArmedCallback callback)
     telemetry.subscribe_armed([&](bool armed){
         _armed = armed;
     });
+    */
 
-    
-
-    auto log_files = std::make_shared<LogFiles>(system);
-
-    while(true){
-        std::cout << "test" << std::endl;
-        
-        if(!_armed && !telemetry.in_air()){
-            log_download_auto(log_files);
-        }
-        std::this_thread::sleep_for(std::chrono::milliseconds(1000));
-    }
-
+    log_download_auto(log_files);
 
     std::cout << "Finished...\n";
 
     return 0;
 }
-
-/*
-void log_download_with_selection(std::shared_ptr<LogFiles> log_files){
-
-    std::pair<LogFiles::Result, std::vector<LogFiles::Entry>> entry_result = log_files->get_entries();
-
-    if (entry_result.first == LogFiles::Result::Success) {
-        
-        std::vector<LogFiles::Entry> entry_list = entry_result.second;
-        std::cout << "Got the entries ! " << entry_list.size() << " logs are available for download.\n";
-
-        std::vector<LogFiles::Entry> entry_list_to_download = log_to_download_selection(entry_list);
-
-        // télécharger les entry qui sont dans entry_list_to_download qui ne sont pas déjà dans le directory
-        log_download_entry_list(entry_list_to_download, log_files);
-    }
-}
-*/
 
 void log_download_auto(std::shared_ptr<LogFiles> log_files){
 
@@ -210,108 +166,6 @@ void log_download_auto(std::shared_ptr<LogFiles> log_files){
     }
 }
 
-/*
-std::vector<LogFiles::Entry> log_to_download_selection(std::vector<LogFiles::Entry> entry_list){
-
-        int option_selected;
-        int x_value;
-        std::string oui_non;
-        std::string date_string;
-        bool option_menu_log_selection = true;
-        std::vector<LogFiles::Entry> entry_list_to_download;
-
-        while(option_menu_log_selection){
-
-            std::cout << "Tapez: \n " << "\"1\" : pour télécharger les X dernier logs \n"
-                        << "\"2\" : pour télécharger les logs d'une date spécifique \n"
-                        << "\"3\" : pour télécharger tous les logs \n" << "\"4\" : pour quitter sans télécharger de log \n";
-            std::cin >> option_selected;
-
-            switch(option_selected) {
-                case 1: // X derniers
-                    std::cout << "Rentrez une valeur X : \n";
-                    std::cin >> x_value;
-                    while(1)
-                    {
-                        if(std::cin.fail()){
-                            std::cin.clear();
-                            std::cout << "You have entered wrong input. \n";
-                        }
-                        if(!std::cin.fail())
-                            break;
-                    }
-                    if(x_value > entry_list.size()){
-                        x_value = entry_list.size();
-                        std::cout << "Il y a " << x_value << " logs prêts à être téléchargés.";
-                    }
-                    std::cout << "Vous souhaitez télécharger les " << x_value << " derniers logs. o/n \n";
-                    std::cin >> oui_non;
-                    std::cout << "La réponse donnée est \""<< oui_non << "\" \n";
-                    if(!oui_non.compare("o")){
-                        entry_list_to_download = {entry_list.end() - x_value, entry_list.end()};
-                        std::cout << entry_list_to_download.size() << " logs vont être téléchargés.\n";
-                        option_menu_log_selection = false;
-                    }
-
-                    break;
-                    
-
-                case 2: // logs à la date YYYY-MM-JJ
-                    std::cout << "Rentrez une date sous le format YYYY-MM-JJ : \n";
-                    std::cin >> date_string;
-                    std::cout << "Vous souhaitez télécharger les logs à la date \""<< date_string << "\" o/n\n";
-                    std::cin >> oui_non;
-                    std::cout << "La réponse donnée est \""<< oui_non << "\" \n";
-                    for (auto& entry : entry_list) {
-                        if(!date_string.compare(entry.date.substr(0,10))){
-                            entry_list_to_download.push_back(entry); 
-                        }
-                    }
-                    if(!oui_non.compare("o")){
-                        std::cout << entry_list_to_download.size() << " logs vont être téléchargés.\n";
-                        
-                        std::cout << "Veuillez confirmez o/n \n";
-                        std::cin >> oui_non;
-                        if(!oui_non.compare("o")){
-                            std::cout << "Début du téléchargement de " << entry_list_to_download.size() << " logs. \n";
-                            option_menu_log_selection = false;
-                        }
-                        
-                    }
-                    break;
-
-                case 3: 
-                    std::cout << "Vous souhaitez télécharger tous les logs. o/n\n";
-                    std::cin >> oui_non;
-                    std::cout << "La réponse donnée est \""<< oui_non << "\" \n";
-                    if(!oui_non.compare("o")){
-                        entry_list_to_download = entry_list;
-                        std::cout << entry_list_to_download.size() << " logs vont être téléchargés.\n";
-                        
-                        std::cout << "Veuillez confirmez o/n \n";
-                        std::cin >> oui_non;
-                        if(!oui_non.compare("o")){
-                            std::cout << "Début du téléchargement de " << entry_list_to_download.size() << " logs. \n";
-                            option_menu_log_selection = false;
-                        }
-                    }
-                    break;
-
-                case 4:
-                    std::cout << "Aucun log ne sera téléchargé.\n";
-                    option_menu_log_selection = false;
-                    break;
-                    
-
-                default:
-                    printf("Veuillez choisir une option.  \n");
-            }
-        }
-
-        return entry_list_to_download;
-}
-*/
-
 void log_download_entry_list(std::vector<LogFiles::Entry> entry_list_to_download, std::shared_ptr<LogFiles> log_files){
 
     bool is_in_the_list = false;
@@ -319,12 +173,6 @@ void log_download_entry_list(std::vector<LogFiles::Entry> entry_list_to_download
     std::string path = "/home/pi/drone/logs/px4/";
     uint32_t existing_log_size_bytes;
 
-    /*
-    fs::path dir(path);
-    if(fs::create_directory(dir)){
-        std::cerr<< "Directory Created: "<< path << "\n";
-    }
-    */
     std::vector<std::string> list_existing_logs = file_name_list_in_directory(path);
 
     for (auto& entry : entry_list_to_download) {

@@ -1,0 +1,36 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/pi/getLog/end_download/end_download.cpp
+chrono
+-
+cstdint
+-
+mavsdk/mavsdk.h
+-
+mavsdk/plugins/action/action.h
+-
+mavsdk/plugins/telemetry/telemetry.h
+-
+mavsdk/plugins/log_files/log_files.h
+-
+iostream
+-
+future
+-
+memory
+-
+thread
+-
+fstream
+-
+sstream
+-
+dirent.h
+-
+

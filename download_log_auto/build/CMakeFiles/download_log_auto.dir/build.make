@@ -79,10 +79,10 @@ download_log_auto_EXTERNAL_OBJECTS =
 
 download_log_auto: CMakeFiles/download_log_auto.dir/download_log_auto.cpp.o
 download_log_auto: CMakeFiles/download_log_auto.dir/build.make
-download_log_auto: /usr/local/lib/libmavsdk_telemetry.so.0.37.0
-download_log_auto: /usr/local/lib/libmavsdk_action.so.0.37.0
-download_log_auto: /usr/local/lib/libmavsdk_log_files.so.0.37.0
-download_log_auto: /usr/local/lib/libmavsdk.so.0.37.0
+download_log_auto: /usr/local/lib/libmavsdk_telemetry.so.0.45.0
+download_log_auto: /usr/local/lib/libmavsdk_action.so.0.45.0
+download_log_auto: /usr/local/lib/libmavsdk_log_files.so.0.45.0
+download_log_auto: /usr/local/lib/libmavsdk.so.0.45.0
 download_log_auto: CMakeFiles/download_log_auto.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/pi/getLog/download_log_auto/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable download_log_auto"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/download_log_auto.dir/link.txt --verbose=$(VERBOSE)

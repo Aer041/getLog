@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/end_download.dir/end_download.cpp.o  -o end_download  -Wl,-rpath,/usr/local/lib /usr/local/lib/libmavsdk_log_files.so.0.45.0 /usr/local/lib/libmavsdk.so.0.45.0 -lstdc++fs 
