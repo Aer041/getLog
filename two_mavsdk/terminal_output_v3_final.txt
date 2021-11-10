@@ -1,0 +1,139 @@
+pi@a41-16l-0003:~/getLog/end_download/build $ ./end_download serial:///dev/serial0:921600 serial:///dev/ttyACM0
+[12:14:59|Info ] MAVSDK version: v0.45.0 (mavsdk_impl.cpp:28)
+Waiting to discover system...
+[12:14:59|Debug] New: System ID: 1 Comp ID: 1 (mavsdk_impl.cpp:482)
+[12:14:59|Debug] Component Autopilot (1) added. (system_impl.cpp:376)
+[12:15:00|Debug] Discovered 1 component(s) (system_impl.cpp:524)
+Discovered autopilot
+First mavsdk connection went well. 
+[12:15:00|Info ] MAVSDK version: v0.45.0 (mavsdk_impl.cpp:28)
+Waiting to discover system...
+[12:15:00|Debug] New: System ID: 1 Comp ID: 1 (mavsdk_impl.cpp:482)
+[12:15:00|Debug] Component Autopilot (1) added. (system_impl.cpp:376)
+[12:15:00|Warn ] Received ack for not-existing command: 520! Ignoring... (mavlink_commands.cpp:265)
+[12:15:00|Debug] Discovered 1 component(s) (system_impl.cpp:524)
+Discovered autopilot
+Second mavsdk connection went well. 
+[12:15:00|Warn ] Received ack for not-existing command: 511! Ignoring... (mavlink_commands.cpp:265)
+[12:15:00|Warn ] Received ack for not-existing command: 511! Ignoring... (mavlink_commands.cpp:265)
+[12:15:01|Warn ] sending again after 0.509977 s, retries to do: 3  (511). (mavlink_commands.cpp:294)
+[12:15:01|Warn ] Received ack for not-existing command: 511! Ignoring... (mavlink_commands.cpp:265)
+[12:15:01|Warn ] sending again after 1.01577 s, retries to do: 2  (511). (mavlink_commands.cpp:294)
+test
+Not armed, starting log download. 
+[12:15:01|Warn ] Received ack for not-existing command: 511! Ignoring... (mavlink_commands.cpp:265)
+test
+Not armed, starting log download. 
+test
+Not armed, starting log download. 
+test
+Not armed, starting log download. 
+test
+Not armed, starting log download. 
+test
+Not armed, starting log download. 
+test
+Not armed, starting log download. 
+test
+Not armed, starting log download. 
+test
+Not armed, starting log download. 
+test
+Not armed, starting log download. 
+test
+Not armed, starting log download. 
+test
+Not armed, starting log download. 
+test
+Not armed, starting log download. 
+[12:15:14|Warn ] No entries received (log_files_impl.cpp:167)
+[12:15:15|Debug] MAVLink: warning: Preflight: GPS Horizontal Pos Error too high (system_impl.cpp:245)
+[12:15:15|Debug] MAVLink: warning: Preflight: GPS Horizontal Pos Error too high (system_impl.cpp:245)
+[12:15:15|Debug] MAVLink: info: [logger] /fs/microsd/log/2021-11-10/12_15_15.ulg (system_impl.cpp:245)
+[12:15:15|Debug] MAVLink: info: [logger] /fs/microsd/log/2021-11-10/12_15_15.ulg (system_impl.cpp:245)
+[12:15:15|Debug] MAVLink: info: Takeoff detected (system_impl.cpp:245)
+[12:15:15|Debug] MAVLink: info: Takeoff detected (system_impl.cpp:245)
+[12:15:18|Error] Received unknown GPS fix type! (telemetry_impl.cpp:892)
+Altitude: 0.129 m
+Altitude: 0.209 m
+[12:15:19|Info ] heartbeats timed out (system_impl.cpp:267)
+[12:15:19|Debug] Discovered 1 component(s) (system_impl.cpp:524)
+[12:15:19|Warn ] Received ack for not-existing command: 520! Ignoring... (mavlink_commands.cpp:265)
+[12:15:19|Warn ] Received ack for not-existing command: 511! Ignoring... (mavlink_commands.cpp:265)
+Altitude: 0.43 m
+Altitude: 0.495 m
+Altitude: 0.487 m
+Altitude: 0.527 m
+[12:15:26|Info ] heartbeats timed out (system_impl.cpp:267)
+Altitude: 0.58 m
+[12:15:27|Debug] Discovered 1 component(s) (system_impl.cpp:524)
+[12:15:27|Warn ] Received ack for not-existing command: 520! Ignoring... (mavlink_commands.cpp:265)
+[12:15:27|Warn ] Received ack for not-existing command: 511! Ignoring... (mavlink_commands.cpp:265)
+Altitude: 0.632 m
+Altitude: 0.656 m
+Altitude: 0.637 m
+Altitude: 0.618 m
+Altitude: 0.56 m
+Altitude: 0.514 m
+[12:15:33|Error] Received unknown GPS fix type! (telemetry_impl.cpp:892)
+[12:15:34|Debug] Component Unsupported component (62) added. (system_impl.cpp:376)
+Altitude: 0.421 m
+Altitude: 0.441 m
+Altitude: 0.465 m
+[12:15:44|Info ] heartbeats timed out (system_impl.cpp:267)
+[12:15:44|Debug] New: System ID: 158 Comp ID: 159 (mavsdk_impl.cpp:482)
+[12:15:44|Debug] Component Unsupported component (159) added. (system_impl.cpp:376)
+[12:15:44|Error] type received in HEARTBEAT was not recognized (system_impl.cpp:223)
+[12:15:44|Debug] Discovered 1 component(s) (system_impl.cpp:524)
+[12:15:44|Warn ] Received ack for not-existing command: 520! Ignoring... (mavlink_commands.cpp:265)
+[12:15:44|Warn ] Received ack for not-existing command: 520! Ignoring... (mavlink_commands.cpp:265)
+[12:15:45|Warn ] sending again after 0.50393 s, retries to do: 3  (520). (mavlink_commands.cpp:294)
+[12:15:45|Warn ] Received ack for not-existing command: 520! Ignoring... (mavlink_commands.cpp:265)
+[12:15:45|Warn ] Received ack for not-existing command: 520! Ignoring... (mavlink_commands.cpp:265)
+[12:15:45|Warn ] sending again after 1.01067 s, retries to do: 2  (520). (mavlink_commands.cpp:294)
+[12:15:45|Warn ] Received ack for not-existing command: 520! Ignoring... (mavlink_commands.cpp:265)
+Altitude: 0.45 m
+[12:15:46|Warn ] sending again after 1.51775 s, retries to do: 1  (520). (mavlink_commands.cpp:294)
+[12:15:46|Warn ] Received ack for not-existing command: 520! Ignoring... (mavlink_commands.cpp:265)
+[12:15:46|Warn ] Received ack for not-existing command: 520! Ignoring... (mavlink_commands.cpp:265)
+[12:15:46|Error] Retrying failed (520) (mavlink_commands.cpp:314)
+[12:15:47|Info ] heartbeats timed out (system_impl.cpp:267)
+Altitude: 0.373 m
+[12:15:48|Debug] Discovered 1 component(s) (system_impl.cpp:524)
+[12:15:48|Warn ] Received ack for not-existing command: 520! Ignoring... (mavlink_commands.cpp:265)
+Altitude: 0.344 m
+Altitude: 0.295 m
+Altitude: 0.218 m
+Altitude: 0.16 m
+Altitude: 0.117 m
+Altitude: 0.12 m
+Altitude: 0.11 m
+Altitude: 0.078 m
+Altitude: 0.059 m
+Altitude: 0.076 m
+Altitude: 0.103 m
+Altitude: 0.096 m
+[12:16:04|Debug] MAVLink: info: Landing detected (system_impl.cpp:245)
+Altitude: 0.067 m
+Altitude: 0.144 m
+[12:16:06|Error] Received unknown GPS fix type! (telemetry_impl.cpp:892)
+[12:16:06|Debug] MAVLink: info: Disarmed by landing (system_impl.cpp:245)
+[12:16:08|Debug] Component Unsupported component (140) added. (system_impl.cpp:376)
+[12:16:16|Debug] Component Unsupported component (172) added. (system_impl.cpp:376)
+[12:16:27|Error] type received in HEARTBEAT was not recognized (system_impl.cpp:223)
+[12:16:33|Info ] heartbeats timed out (system_impl.cpp:267)
+[12:16:35|Debug] Discovered 4 component(s) (system_impl.cpp:524)
+[12:16:35|Warn ] Received ack for not-existing command: 511! Ignoring... (mavlink_commands.cpp:265)
+[12:16:35|Warn ] sending again after 0.503097 s, retries to do: 3  (511). (mavlink_commands.cpp:294)
+[12:16:35|Warn ] sending again after 0.503675 s, retries to do: 3  (520). (mavlink_commands.cpp:294)
+[12:16:35|Warn ] Received ack for not-existing command: 511! Ignoring... (mavlink_commands.cpp:265)
+[12:16:40|Debug] New: System ID: 60 Comp ID: 184 (mavsdk_impl.cpp:482)
+[12:16:40|Debug] Component Unsupported component (184) added. (system_impl.cpp:376)
+[12:16:42|Debug] New: System ID: 200 Comp ID: 1 (mavsdk_impl.cpp:482)
+[12:16:42|Debug] Component Autopilot (1) added. (system_impl.cpp:376)
+[12:16:53|Info ] heartbeats timed out (system_impl.cpp:267)
+[12:16:55|Debug] Discovered 4 component(s) (system_impl.cpp:524)
+[12:16:55|Warn ] Received ack for not-existing command: 520! Ignoring... (mavlink_commands.cpp:265)
+[12:16:55|Warn ] Received ack for not-existing command: 511! Ignoring... (mavlink_commands.cpp:265)
+^C
+pi@a41-16l-0003:~/getLog/end_download/build $ 

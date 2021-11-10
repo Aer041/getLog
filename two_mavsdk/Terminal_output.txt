@@ -1,0 +1,213 @@
+pi@a41-16l-0003:~/getLog/end_download/build $ ./end_download serial:///dev/serial0:921600 serial:///dev/ttyACM0
+[09:45:47|Info ] MAVSDK version: v0.45.0 (mavsdk_impl.cpp:28)
+[09:45:47|Info ] MAVSDK version: v0.45.0 (mavsdk_impl.cpp:28)
+Waiting to discover system...
+[09:45:47|Debug] New: System ID: 1 Comp ID: 1 (mavsdk_impl.cpp:482)
+[09:45:47|Debug] New: System ID: 1 Comp ID: 1 (mavsdk_impl.cpp:482)
+[09:45:47|Debug] Component Autopilot (1) added. (system_impl.cpp:376)
+[09:45:47|Debug] Component Autopilot (1) added. (system_impl.cpp:376)
+[09:45:47|Debug] Discovered 1 component(s) (system_impl.cpp:524)
+[09:45:47|Debug] MAVLink: critical: Connection to ground station lost (system_impl.cpp:245)
+[09:45:48|Debug] MAVLink: info: Data link regained (system_impl.cpp:245)
+[09:45:48|Debug] Discovered 1 component(s) (system_impl.cpp:524)
+Discovered autopilot
+Waiting to discover system...
+Discovered autopilot
+[09:45:48|Debug] MAVLink: critical: Connection to ground station lost (system_impl.cpp:245)
+[09:45:48|Debug] MAVLink: critical: Connection to ground station lost (system_impl.cpp:245)
+[09:45:48|Debug] MAVLink: info: Data link regained (system_impl.cpp:245)
+[09:45:48|Debug] MAVLink: info: Data link regained (system_impl.cpp:245)
+[09:45:48|Debug] New: System ID: 196 Comp ID: 1 (mavsdk_impl.cpp:482)
+[09:45:48|Debug] Component Autopilot (1) added. (system_impl.cpp:376)
+[09:45:49|Warn ] sending again after 0.506888 s, retries to do: 3  (520). (mavlink_commands.cpp:294)
+[09:45:55|Debug] New: System ID: 169 Comp ID: 57 (mavsdk_impl.cpp:482)
+[09:45:55|Debug] Component Unsupported component (57) added. (system_impl.cpp:376)
+[09:45:55|Debug] Discovered 1 component(s) (system_impl.cpp:524)
+[09:45:56|Warn ] sending again after 0.502409 s, retries to do: 3  (520). (mavlink_commands.cpp:294)
+[09:45:56|Warn ] Received ack for not-existing command: 520! Ignoring... (mavlink_commands.cpp:265)
+[09:45:56|Warn ] Received ack for not-existing command: 520! Ignoring... (mavlink_commands.cpp:265)
+[09:45:56|Warn ] sending again after 1.00889 s, retries to do: 2  (520). (mavlink_commands.cpp:294)
+[09:45:56|Warn ] Received ack for not-existing command: 520! Ignoring... (mavlink_commands.cpp:265)
+[09:45:57|Warn ] sending again after 1.51351 s, retries to do: 1  (520). (mavlink_commands.cpp:294)
+[09:45:57|Warn ] Received ack for not-existing command: 520! Ignoring... (mavlink_commands.cpp:265)
+[09:45:57|Warn ] Received ack for not-existing command: 520! Ignoring... (mavlink_commands.cpp:265)
+[09:45:57|Error] Retrying failed (520) (mavlink_commands.cpp:314)
+[09:45:58|Info ] heartbeats timed out (system_impl.cpp:267)
+[09:45:59|Info ] heartbeats timed out (system_impl.cpp:267)
+^C
+pi@a41-16l-0003:~/getLog/end_download/build $ ./end_download serial:///dev/serial0:921600 serial:///dev/ttyACM0
+[09:46:34|Info ] MAVSDK version: v0.45.0 (mavsdk_impl.cpp:28)
+[09:46:34|Info ] MAVSDK version: v0.45.0 (mavsdk_impl.cpp:28)
+Waiting to discover system...
+[09:46:34|Debug] New: System ID: 1 Comp ID: 1 (mavsdk_impl.cpp:482)
+[09:46:34|Debug] New: System ID: 1 Comp ID: 1 (mavsdk_impl.cpp:482)
+[09:46:34|Debug] Component Autopilot (1) added. (system_impl.cpp:376)
+[09:46:34|Debug] Component Autopilot (1) added. (system_impl.cpp:376)
+[09:46:35|Debug] Discovered 1 component(s) (system_impl.cpp:524)
+Discovered autopilot
+Waiting to discover system...
+[09:46:35|Warn ] Received ack for not-existing command: 520! Ignoring... (mavlink_commands.cpp:265)
+[09:46:35|Debug] MAVLink: critical: Connection to ground station lost (system_impl.cpp:245)
+[09:46:35|Debug] MAVLink: warning: Preflight: not enough GPS Satellites (system_impl.cpp:245)
+[09:46:35|Debug] MAVLink: info: Data link regained (system_impl.cpp:245)
+[09:46:35|Debug] Discovered 1 component(s) (system_impl.cpp:524)
+Discovered autopilot
+Finished...
+pi@a41-16l-0003:~/getLog/end_download/build $ ./end_download serial:///dev/serial0:921600 serial:///dev/ttyACM0
+[09:53:31|Info ] MAVSDK version: v0.45.0 (mavsdk_impl.cpp:28)
+[09:53:31|Info ] MAVSDK version: v0.45.0 (mavsdk_impl.cpp:28)
+Waiting to discover system...
+[09:53:31|Debug] New: System ID: 1 Comp ID: 1 (mavsdk_impl.cpp:482)
+[09:53:31|Debug] New: System ID: 1 Comp ID: 1 (mavsdk_impl.cpp:482)
+[09:53:31|Debug] Component Autopilot (1) added. (system_impl.cpp:376)
+[09:53:31|Debug] Component Autopilot (1) added. (system_impl.cpp:376)
+[09:53:32|Debug] Discovered 1 component(s) (system_impl.cpp:524)
+Discovered autopilot
+Waiting to discover system...
+[09:53:32|Debug] MAVLink: critical: Connection to ground station lost (system_impl.cpp:245)
+[09:53:32|Debug] MAVLink: warning: Preflight: GPS Horizontal Pos Error too high (system_impl.cpp:245)
+[09:53:32|Warn ] Received ack for not-existing command: 520! Ignoring... (mavlink_commands.cpp:265)
+[09:53:32|Debug] MAVLink: info: Data link regained (system_impl.cpp:245)
+[09:53:32|Debug] Discovered 1 component(s) (system_impl.cpp:524)
+Discovered autopilot
+Finished...
+pi@a41-16l-0003:~/getLog/end_download/build $ ./end_download serial:///dev/serial0:921600 serial:///dev/ttyACM0
+[09:53:34|Info ] MAVSDK version: v0.45.0 (mavsdk_impl.cpp:28)
+[09:53:34|Info ] MAVSDK version: v0.45.0 (mavsdk_impl.cpp:28)
+Waiting to discover system...
+[09:53:34|Debug] New: System ID: 1 Comp ID: 1 (mavsdk_impl.cpp:482)
+[09:53:34|Debug] Component Autopilot (1) added. (system_impl.cpp:376)
+[09:53:34|Debug] New: System ID: 1 Comp ID: 1 (mavsdk_impl.cpp:482)
+[09:53:34|Debug] Component Autopilot (1) added. (system_impl.cpp:376)
+[09:53:35|Debug] Discovered 1 component(s) (system_impl.cpp:524)
+Discovered autopilot
+Waiting to discover system...
+[09:53:35|Debug] Discovered 1 component(s) (system_impl.cpp:524)
+Discovered autopilot
+Finished...
+pi@a41-16l-0003:~/getLog/end_download/build $ ./end_download serial:///dev/serial0:921600 serial:///dev/ttyACM0
+[09:53:40|Info ] MAVSDK version: v0.45.0 (mavsdk_impl.cpp:28)
+[09:53:40|Info ] MAVSDK version: v0.45.0 (mavsdk_impl.cpp:28)
+Waiting to discover system...
+[09:53:40|Debug] New: System ID: 1 Comp ID: 1 (mavsdk_impl.cpp:482)
+[09:53:40|Debug] New: System ID: 1 Comp ID: 1 (mavsdk_impl.cpp:482)
+[09:53:40|Debug] Component Autopilot (1) added. (system_impl.cpp:376)
+[09:53:40|Debug] Component Autopilot (1) added. (system_impl.cpp:376)
+[09:53:40|Debug] Discovered 1 component(s) (system_impl.cpp:524)
+[09:53:40|Debug] MAVLink: critical: Connection to ground station lost (system_impl.cpp:245)
+[09:53:40|Warn ] Received ack for not-existing command: 520! Ignoring... (mavlink_commands.cpp:265)
+[09:53:41|Debug] MAVLink: warning: Preflight: not enough GPS Satellites (system_impl.cpp:245)
+[09:53:41|Debug] MAVLink: info: Data link regained (system_impl.cpp:245)
+[09:53:41|Debug] MAVLink: critical: Connection to ground station lost (system_impl.cpp:245)
+[09:53:41|Debug] MAVLink: warning: Preflight: GPS Horizontal Pos Error too high (system_impl.cpp:245)
+[09:53:42|Debug] Discovered 1 component(s) (system_impl.cpp:524)
+Discovered autopilot
+Waiting to discover system...
+Discovered autopilot
+[09:53:42|Warn ] Received ack for not-existing command: 520! Ignoring... (mavlink_commands.cpp:265)
+[09:53:46|Info ] heartbeats timed out (system_impl.cpp:267)
+^C
+pi@a41-16l-0003:~/getLog/end_download/build $ ./end_download serial:///dev/serial0:921600 serial:///dev/ttyACM0
+[09:54:02|Info ] MAVSDK version: v0.45.0 (mavsdk_impl.cpp:28)
+[09:54:02|Info ] MAVSDK version: v0.45.0 (mavsdk_impl.cpp:28)
+[09:54:02|Debug] New: System ID: 1 Comp ID: 1 (mavsdk_impl.cpp:482)
+Waiting to discover system...
+[09:54:02|Debug] Component Autopilot (1) added. (system_impl.cpp:376)
+[09:54:02|Debug] New: System ID: 1 Comp ID: 1 (mavsdk_impl.cpp:482)
+[09:54:02|Debug] Component Autopilot (1) added. (system_impl.cpp:376)
+[09:54:02|Debug] Discovered 1 component(s) (system_impl.cpp:524)
+Discovered autopilot
+Waiting to discover system...
+[09:54:02|Debug] MAVLink: critical: Connection to ground station lost (system_impl.cpp:245)
+[09:54:02|Debug] MAVLink: warning: Preflight: GPS Horizontal Pos Error too high (system_impl.cpp:245)
+[09:54:02|Debug] MAVLink: info: Data link regained (system_impl.cpp:245)
+[09:54:02|Debug] Discovered 1 component(s) (system_impl.cpp:524)
+Discovered autopilot
+Finished...
+pi@a41-16l-0003:~/getLog/end_download/build $ ./end_download serial:///dev/serial0:921600 serial:///dev/ttyACM0
+[09:54:04|Info ] MAVSDK version: v0.45.0 (mavsdk_impl.cpp:28)
+[09:54:04|Info ] MAVSDK version: v0.45.0 (mavsdk_impl.cpp:28)
+[09:54:04|Debug] New: System ID: 1 Comp ID: 1 (mavsdk_impl.cpp:482)
+Waiting to discover system...
+[09:54:04|Debug] New: System ID: 1 Comp ID: 1 (mavsdk_impl.cpp:482)
+[09:54:04|Debug] Component Autopilot (1) added. (system_impl.cpp:376)
+[09:54:04|Debug] Component Autopilot (1) added. (system_impl.cpp:376)
+[09:54:05|Debug] Discovered 1 component(s) (system_impl.cpp:524)
+Discovered autopilot
+Waiting to discover system...
+[09:54:05|Debug] Discovered 1 component(s) (system_impl.cpp:524)
+Discovered autopilot
+Finished...
+pi@a41-16l-0003:~/getLog/end_download/build $ ./end_download serial:///dev/serial0:921600 serial:///dev/ttyACM0
+[09:54:07|Info ] MAVSDK version: v0.45.0 (mavsdk_impl.cpp:28)
+[09:54:07|Info ] MAVSDK version: v0.45.0 (mavsdk_impl.cpp:28)
+[09:54:07|Debug] New: System ID: 1 Comp ID: 1 (mavsdk_impl.cpp:482)
+[09:54:07|Debug] Component Autopilot (1) added. (system_impl.cpp:376)
+Waiting to discover system...
+[09:54:07|Debug] New: System ID: 1 Comp ID: 1 (mavsdk_impl.cpp:482)
+[09:54:07|Debug] Component Autopilot (1) added. (system_impl.cpp:376)
+[09:54:07|Debug] Component Unsupported component (60) added. (system_impl.cpp:376)
+[09:54:07|Debug] Discovered 2 component(s) (system_impl.cpp:524)
+Discovered autopilot
+Waiting to discover system...
+[09:54:08|Warn ] sending again after 0.501938 s, retries to do: 3  (520). (mavlink_commands.cpp:294)
+[09:54:08|Warn ] Received ack for not-existing command: 520! Ignoring... (mavlink_commands.cpp:265)
+[09:54:08|Debug] Discovered 1 component(s) (system_impl.cpp:524)
+Discovered autopilot
+Finished...
+pi@a41-16l-0003:~/getLog/end_download/build $ ./end_download serial:///dev/serial0:921600 serial:///dev/ttyACM0
+[09:54:10|Info ] MAVSDK version: v0.45.0 (mavsdk_impl.cpp:28)
+[09:54:10|Info ] MAVSDK version: v0.45.0 (mavsdk_impl.cpp:28)
+[09:54:10|Debug] New: System ID: 1 Comp ID: 1 (mavsdk_impl.cpp:482)
+[09:54:10|Debug] Component Autopilot (1) added. (system_impl.cpp:376)
+Waiting to discover system...
+[09:54:10|Debug] New: System ID: 1 Comp ID: 1 (mavsdk_impl.cpp:482)
+[09:54:10|Debug] Component Autopilot (1) added. (system_impl.cpp:376)
+[09:54:10|Debug] Discovered 1 component(s) (system_impl.cpp:524)
+Discovered autopilot
+Waiting to discover system...
+[09:54:11|Warn ] sending again after 0.507723 s, retries to do: 3  (520). (mavlink_commands.cpp:294)
+[09:54:12|Debug] Discovered 1 component(s) (system_impl.cpp:524)
+Discovered autopilot
+Finished...
+pi@a41-16l-0003:~/getLog/end_download/build $ ./end_download serial:///dev/serial0:921600 serial:///dev/ttyACM0
+[09:54:29|Info ] MAVSDK version: v0.45.0 (mavsdk_impl.cpp:28)
+[09:54:29|Info ] MAVSDK version: v0.45.0 (mavsdk_impl.cpp:28)
+[09:54:29|Debug] New: System ID: 1 Comp ID: 1 (mavsdk_impl.cpp:482)
+Waiting to discover system...
+[09:54:29|Debug] New: System ID: 1 Comp ID: 1 (mavsdk_impl.cpp:482)
+[09:54:29|Debug] Component Autopilot (1) added. (system_impl.cpp:376)
+[09:54:29|Debug] Component Autopilot (1) added. (system_impl.cpp:376)
+[09:54:29|Debug] Discovered 1 component(s) (system_impl.cpp:524)
+[09:54:29|Debug] MAVLink: critical: Connection to ground station lost (system_impl.cpp:245)
+[09:54:30|Debug] MAVLink: warning: Preflight: GPS Horizontal Pos Error too high (system_impl.cpp:245)
+[09:54:30|Debug] MAVLink: critical: Connection to ground station lost (system_impl.cpp:245)
+[09:54:30|Debug] Discovered 1 component(s) (system_impl.cpp:524)
+Discovered autopilot
+Waiting to discover system...
+Discovered autopilot
+[09:54:30|Debug] MAVLink: critical: Connection to ground station lost (system_impl.cpp:245)
+[09:54:30|Debug] MAVLink: warning: Preflight: GPS Horizontal Pos Error too high (system_impl.cpp:245)
+[09:54:30|Debug] MAVLink: warning: Preflight: GPS Horizontal Pos Error too high (system_impl.cpp:245)
+[09:54:30|Debug] MAVLink: info: Data link regained (system_impl.cpp:245)
+[09:54:33|Info ] heartbeats timed out (system_impl.cpp:267)
+^C
+pi@a41-16l-0003:~/getLog/end_download/build $ ./end_download serial:///dev/serial0:921600 serial:///dev/ttyACM0
+[09:54:41|Info ] MAVSDK version: v0.45.0 (mavsdk_impl.cpp:28)
+[09:54:41|Info ] MAVSDK version: v0.45.0 (mavsdk_impl.cpp:28)
+Waiting to discover system...
+[09:54:41|Debug] New: System ID: 1 Comp ID: 1 (mavsdk_impl.cpp:482)
+[09:54:41|Debug] New: System ID: 1 Comp ID: 1 (mavsdk_impl.cpp:482)
+[09:54:41|Debug] Component Autopilot (1) added. (system_impl.cpp:376)
+[09:54:41|Debug] Component Autopilot (1) added. (system_impl.cpp:376)
+[09:54:41|Debug] Discovered 1 component(s) (system_impl.cpp:524)
+[09:54:41|Warn ] Received ack for not-existing command: 520! Ignoring... (mavlink_commands.cpp:265)
+[09:54:42|Debug] Discovered 1 component(s) (system_impl.cpp:524)
+Discovered autopilot
+Waiting to discover system...
+Discovered autopilot
+[09:54:52|Debug] Component Unsupported component (162) added. (system_impl.cpp:376)
+[09:54:54|Error] type received in HEARTBEAT was not recognized (system_impl.cpp:223)
+^C
+pi@a41-16l-0003:~/getLog/end_download/build $ 
+
