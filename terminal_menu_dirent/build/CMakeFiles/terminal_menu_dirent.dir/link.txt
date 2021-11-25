@@ -1,1 +1,0 @@
-/usr/bin/c++     CMakeFiles/terminal_menu_dirent.dir/terminal_menu_dirent.cpp.o  -o terminal_menu_dirent  -Wl,-rpath,/usr/local/lib /usr/local/lib/libmavsdk_telemetry.so.0.37.0 /usr/local/lib/libmavsdk_action.so.0.37.0 /usr/local/lib/libmavsdk_log_files.so.0.37.0 /usr/local/lib/libmavsdk.so.0.37.0 -lstdc++fs 

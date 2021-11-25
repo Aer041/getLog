@@ -1,3 +1,0 @@
-/home/pi/getLog/terminal_menu_dirent/build/CMakeFiles/rebuild_cache.dir
-/home/pi/getLog/terminal_menu_dirent/build/CMakeFiles/terminal_menu_dirent.dir
-/home/pi/getLog/terminal_menu_dirent/build/CMakeFiles/edit_cache.dir

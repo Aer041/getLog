@@ -1,3 +1,0 @@
-/home/pi/getLog/two_mavsdk/build/CMakeFiles/rebuild_cache.dir
-/home/pi/getLog/two_mavsdk/build/CMakeFiles/two_mavsdk.dir
-/home/pi/getLog/two_mavsdk/build/CMakeFiles/edit_cache.dir
