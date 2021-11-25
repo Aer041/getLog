@@ -79,6 +79,8 @@ end_download_EXTERNAL_OBJECTS =
 
 end_download: CMakeFiles/end_download.dir/end_download.cpp.o
 end_download: CMakeFiles/end_download.dir/build.make
+end_download: /usr/local/lib/libmavsdk_telemetry.so.0.45.0
+end_download: /usr/local/lib/libmavsdk_action.so.0.45.0
 end_download: /usr/local/lib/libmavsdk_log_files.so.0.45.0
 end_download: /usr/local/lib/libmavsdk.so.0.45.0
 end_download: CMakeFiles/end_download.dir/link.txt

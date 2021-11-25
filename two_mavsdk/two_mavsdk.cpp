@@ -132,19 +132,18 @@ int main(int argc, char** argv)
     std::cout << "First mavsdk connection went well. \n";
 
 
-    Mavsdk mavsdk_usb;
-    ConnectionResult connection_result_usb = mavsdk_usb.add_any_connection(argv[2]);
+    ConnectionResult connection_result_usb = mavsdk.add_any_connection(argv[2]);
     if (connection_result_usb != ConnectionResult::Success) {
         std::cerr << "Connection USB failed: " << connection_result_usb << '\n';
         return 1;
     }
-    auto system_usb = get_system(mavsdk_usb);
+    auto system_usb = get_system(mavsdk);
     if (!system_usb) {
         return 1;
     }
     std::cout << "Second mavsdk connection went well. \n";
 
-
+/*
     // Instantiate pluginis.
     auto telemetry = Telemetry{system};
     auto action = Action{system};
@@ -180,6 +179,7 @@ int main(int argc, char** argv)
         }
         std::this_thread::sleep_for(std::chrono::milliseconds(1000));
     }
+    */
 
     //log_download_auto(log_files);
 

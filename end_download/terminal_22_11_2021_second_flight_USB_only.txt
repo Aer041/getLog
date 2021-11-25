@@ -1,0 +1,185 @@
+[02:02:27|Info ] MAVSDK version: v0.45.0 (mavsdk_impl.cpp:28)
+Waiting to discover system...
+[02:02:27|Debug] New: System ID: 1 Comp ID: 1 (mavsdk_impl.cpp:482)
+[02:02:27|Debug] Component Autopilot (1) added. (system_impl.cpp:376)
+[02:02:27|Debug] Discovered 1 component(s) (system_impl.cpp:524)
+Discovered autopilot
+[02:02:27|Debug] MAVLink: info: Data link regained (system_impl.cpp:245)
+test
+Simulator log download 
+[02:02:27|Debug] MAVLink: warning: Preflight: GPS Horizontal Pos Error too high (system_impl.cpp:245)
+Armed: 0
+test
+Simulator log download 
+Armed: 0
+test
+Simulator log download 
+Armed: 0
+test
+Simulator log download 
+Armed: 0
+test
+Simulator log download 
+Armed: 0
+test
+Simulator log download 
+Armed: 0
+test
+Simulator log download 
+Armed: 0
+test
+Simulator log download 
+Armed: 0
+test
+Simulator log download 
+Armed: 0
+test
+Simulator log download 
+Armed: 0
+test
+Simulator log download 
+Armed: 0
+test
+Simulator log download 
+Armed: 0
+test
+Simulator log download 
+Armed: 0
+test
+Simulator log download 
+[02:02:40|Debug] MAVLink: info: Manual control regained after 510.7s (system_impl.cpp:245)
+Armed: 0
+test
+Simulator log download 
+Armed: 0
+test
+Simulator log download 
+[02:02:42|Debug] MAVLink: warning: Preflight: GPS Horizontal Pos Error too high (system_impl.cpp:245)
+[02:02:42|Debug] MAVLink: info: Armed by RC (system_impl.cpp:245)
+[02:02:42|Debug] MAVLink: info: [logger] /fs/microsd/log/2021-11-22/14_02_42.ulg (system_impl.cpp:245)
+Armed: 1
+test
+Altitude: 0.007 m
+Armed: 1
+test
+Altitude: -0.027 m
+Armed: 1
+test
+Altitude: -0.033 m
+Armed: 1
+test
+[02:02:46|Debug] MAVLink: info: Takeoff detected (system_impl.cpp:245)
+Altitude: 0.008 m
+Armed: 1
+test
+Altitude: 0.077 m
+Armed: 1
+test
+Altitude: 0.109 m
+Armed: 1
+test
+Altitude: 0.136 m
+Armed: 1
+test
+Altitude: 0.225 m
+Armed: 1
+test
+Altitude: 0.377 m
+Armed: 1
+test
+Altitude: 0.501 m
+Armed: 1
+test
+Altitude: 0.583 m
+Armed: 1
+test
+Altitude: 0.646 m
+Armed: 1
+test
+Altitude: 0.736 m
+Armed: 1
+test
+Altitude: 0.862 m
+Armed: 1
+test
+Altitude: 1.011 m
+Armed: 1
+test
+Altitude: 1.171 m
+Armed: 1
+test
+Altitude: 1.312 m
+Armed: 1
+test
+Altitude: 1.433 m
+Armed: 1
+test
+Altitude: 1.547 m
+Armed: 1
+test
+Altitude: 1.246 m
+Armed: 1
+test
+Altitude: 0.901 m
+Armed: 1
+test
+Altitude: 0.574 m
+Armed: 1
+test
+Altitude: 0.323 m
+Armed: 1
+test
+Altitude: 0.131 m
+Armed: 1
+test
+Altitude: -0.139 m
+Armed: 1
+test
+Altitude: -0.282 m
+Armed: 1
+test
+Altitude: -0.356 m
+Armed: 1
+test
+Altitude: -0.372 m
+Armed: 1
+test
+Altitude: -0.381 m
+Armed: 1
+test
+Altitude: -0.365 m
+Armed: 1
+test
+Altitude: -0.324 m
+Armed: 1
+test
+Altitude: -0.287 m
+Armed: 1
+test
+Altitude: -0.205 m
+Armed: 1
+test
+Altitude: -0.095 m
+Armed: 1
+test
+Altitude: 0.021 m
+Armed: 1
+test
+Altitude: 0.122 m
+[02:03:19|Debug] MAVLink: critical: Kill-switch engaged (system_impl.cpp:245) // J'AI DU KILL. APRES LE TAKEOFF, JE SUIS MONTEE, VOULU TESTER SI LE DRONE REPONDAIT AUX COMMANDES CORRECTEMENT EN ECOUTANT LES MOTEURS. LES MOTEURS ON COMMENCE A ACCELERER DE PLUS EN PLUS, RADIO VERS LE BAS POUR LE FAIRE ATTERIR, NE REPONDAIT PAS. JE L'AI KILL.
+Armed: 1
+test
+Altitude: 0.202 m
+Armed: 1
+test
+Altitude: 0.233 m
+Armed: 1
+test
+Altitude: 0.237 m
+Armed: 1
+test
+Altitude: 0.243 m
+Armed: 1
+test
+^C
+pi@a41-16l-0003:~/getLog/end_download/build $ 

@@ -12,9 +12,10 @@ add_executable(end_download
 find_package(MAVSDK REQUIRED)
 
 target_link_libraries(end_download
+    MAVSDK::mavsdk_telemetry
+    MAVSDK::mavsdk_action
     MAVSDK::mavsdk_log_files
     MAVSDK::mavsdk
-    stdc++fs
 )
 
 if(NOT MSVC)

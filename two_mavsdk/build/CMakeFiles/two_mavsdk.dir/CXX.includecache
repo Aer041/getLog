@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/pi/getLog/end_download/end_download.cpp
+/home/pi/getLog/two_mavsdk/two_mavsdk.cpp
 chrono
 -
 cstdint
@@ -32,7 +32,5 @@ fstream
 sstream
 -
 dirent.h
--
-cstdio
 -
 

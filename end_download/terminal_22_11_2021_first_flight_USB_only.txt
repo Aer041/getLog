@@ -1,0 +1,86 @@
+pi@a41-16l-0003:~/getLog/end_download/build $ ./end_download serial:///dev/ttyACM0
+[01:52:54|Info ] MAVSDK version: v0.45.0 (mavsdk_impl.cpp:28)
+Waiting to discover system...
+[01:52:54|Debug] New: System ID: 1 Comp ID: 1 (mavsdk_impl.cpp:482)
+[01:52:54|Debug] Component Autopilot (1) added. (system_impl.cpp:376)
+[01:52:54|Debug] Discovered 1 component(s) (system_impl.cpp:524)
+Discovered autopilot
+test
+[01:52:54|Warn ] sending again, retries to do: 3  (SYS_HITL). (mavlink_parameters.cpp:643)
+Armed: 0
+[01:52:55|Debug] Received all entries (log_files_impl.cpp:169)
+Armed: 0
+test
+Armed: 0
+[01:52:57|Debug] Received all entries (log_files_impl.cpp:169)
+Armed: 0
+test
+Armed: 0
+[01:52:59|Debug] Received all entries (log_files_impl.cpp:169)
+Armed: 0
+test
+Armed: 0
+[01:53:01|Debug] Received all entries (log_files_impl.cpp:169)
+[01:53:02|Debug] MAVLink: warning: Preflight: GPS Horizontal Pos Error too high (system_impl.cpp:245)
+Armed: 0
+[01:53:02|Debug] MAVLink: critical: Fail: CPU load too high: 95.1% (system_impl.cpp:245) // ICI J'AI ESSAYE DE ARMER LE DRONE
+test
+Armed: 0
+[01:53:03|Debug] Received all entries (log_files_impl.cpp:169)
+Armed: 0
+test
+Armed: 0
+[01:53:05|Debug] Received all entries (log_files_impl.cpp:169)
+Armed: 0
+test
+Armed: 0
+[01:53:07|Debug] MAVLink: warning: Preflight: GPS Horizontal Pos Error too high (system_impl.cpp:245)
+[01:53:07|Debug] MAVLink: critical: Fail: CPU load too high: 100.0% (system_impl.cpp:245) // ICI J'AI ESSAYE DE ARMER LE DRONE
+[01:53:08|Debug] Received all entries (log_files_impl.cpp:169)
+Armed: 0
+test
+Armed: 0
+[01:53:10|Debug] Received all entries (log_files_impl.cpp:169)
+Armed: 0
+test
+Armed: 0
+[01:53:11|Warn ] No entries received (log_files_impl.cpp:167)
+Armed: 0 // LA CA A PLANTE. ON NE VOIT PLUS LE "test" QUI EST DANS LA BOUCLE WHILE
+Armed: 0
+Armed: 0
+Armed: 0
+[01:53:15|Debug] MAVLink: warning: Preflight: GPS Horizontal Pos Error too high (system_impl.cpp:245)
+[01:53:15|Debug] MAVLink: info: Armed by RC (system_impl.cpp:245) // MAINTENANT QUE LA BOUCLE WHILE EST "CASSEE", ME LAISSE DECOLER.
+[01:53:15|Debug] MAVLink: info: [logger] /fs/microsd/log/2021-11-22/13_53_15.ulg (system_impl.cpp:245)
+Armed: 1
+Altitude: 0.064 m
+Armed: 1
+Altitude: 0.134 m
+Armed: 1
+Altitude: 0.185 m
+[01:53:18|Debug] MAVLink: info: Takeoff detected (system_impl.cpp:245)
+Armed: 1
+Altitude: 0.023 m
+Armed: 1
+Altitude: 0.086 m
+Armed: 1
+Altitude: 0.198 m
+Armed: 1
+Altitude: 0.308 m
+Armed: 1
+Altitude: 0.389 m
+[01:53:23|Debug] MAVLink: info: Landing detected (system_impl.cpp:245)
+Armed: 1
+Altitude: 0.443 m
+Armed: 1
+Altitude: 0.549 m
+[01:53:25|Debug] MAVLink: info: Disarmed by landing (system_impl.cpp:245)
+Armed: 0
+Armed: 0
+Armed: 0
+Armed: 0
+Armed: 0
+Armed: 0
+Armed: 0
+^C
+pi@a41-16l-0003:~/getLog/end_download/build $ 

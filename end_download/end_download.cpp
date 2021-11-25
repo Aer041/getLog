@@ -15,6 +15,8 @@
 #include <fstream>
 #include <sstream>
 #include <dirent.h>
+#include <cstdio>
+
 
 using namespace mavsdk;
 using std::chrono::seconds;
@@ -25,6 +27,7 @@ void log_download_auto(std::shared_ptr<LogFiles> log_files);
 //std::vector<LogFiles::Entry> log_to_download_selection(std::vector<LogFiles::Entry> entry_list);
 void log_download_entry_list(std::vector<LogFiles::Entry> entry_list_to_download, std::shared_ptr<LogFiles> log_files);
 std::streampos get_size_of_file_at_path(std::string filePath);
+bool erase_file_at_path(std::string file_name);
 
 void usage(const std::string& bin_name)
 {
@@ -132,18 +135,42 @@ int main(int argc, char** argv)
     }
 
     // Instantiate pluginis.
-    auto log_files = std::make_shared<LogFiles>(system);
-
-    /*
     auto telemetry = Telemetry{system};
     auto action = Action{system};
-    
+    auto log_files = std::make_shared<LogFiles>(system);
+
+    const auto set_rate_result = telemetry.set_rate_position(1.0);
+    if (set_rate_result != Telemetry::Result::Success) {
+        std::cerr << "Setting rate failed: " << set_rate_result << '\n';
+        return 1;
+    }
+
+    // Set up callback to monitor altitude while the vehicle is in flight
+    telemetry.subscribe_position([](Telemetry::Position position) {
+        std::cout << "Altitude: " << position.relative_altitude_m << " m\n";
+    });
+
+    // void mavsdk::Telemetry::subscribe_armed(ArmedCallback callback)
     telemetry.subscribe_armed([&](bool armed){
         _armed = armed;
+        std::cout << "Armed: " << _armed << "\n";
     });
-    */
 
-    log_download_auto(log_files);
+
+    while(true){
+        std::cout << "test" << std::endl;
+
+        
+        if(!_armed && !telemetry.in_air()){
+            log_download_auto(log_files);
+            std::cout << "Simulator log download \n";
+        }
+        
+        std::this_thread::sleep_for(std::chrono::milliseconds(1000));
+    }
+    
+
+    //log_download_auto(log_files);
 
     std::cout << "Finished...\n";
 
@@ -155,15 +182,18 @@ void log_download_auto(std::shared_ptr<LogFiles> log_files){
     std::pair<LogFiles::Result, std::vector<LogFiles::Entry>> entry_result = log_files->get_entries();
     int temp = 1;
 
+
     if (entry_result.first == LogFiles::Result::Success) {
-        
         std::vector<LogFiles::Entry> entry_list_to_download;
         std::vector<LogFiles::Entry> entry_list = entry_result.second;
-        //std::cout << "Got the entries ! " << entry_list.size() << " logs are available for download.\n";
+        std::cout << "Got the entries ! " << entry_list.size() << " logs are available for download.\n";
         //entry_list_to_download = {entry_list.begin(), entry_list.end() - temp};
         entry_list_to_download = entry_list;
         log_download_entry_list(entry_list_to_download, log_files);
+    }else{
+        std::cout << "Failed to get entries.\n";
     }
+
 }
 
 void log_download_entry_list(std::vector<LogFiles::Entry> entry_list_to_download, std::shared_ptr<LogFiles> log_files){
@@ -194,16 +224,20 @@ void log_download_entry_list(std::vector<LogFiles::Entry> entry_list_to_download
                     //std::cout << file_path_stream.str() << " already exist in folder" << "\n";
 
                     // check if entry found in folder is complete
-                    
                     if(is_in_the_list){
                         existing_log_size_bytes = get_size_of_file_at_path(file_path_stream.str());
                         
                         //std::cout << "entry.size_bytes = " << entry.size_bytes << "\n";
                         //std::cout << "existing_log_size_bytes = " << existing_log_size_bytes << "\n";
 
-                        if(entry.size_bytes != existing_log_size_bytes){
-                            incomplete_entry_downloaded = true;
-                            std::cout << "An incomplet log download has benn found. Restarting the download of this log.";
+                        if(entry.size_bytes != existing_log_size_bytes){ 
+                            std::cout << "An incomplet log download has benn found. Restarting the download of this log. \n";
+                            std::cout << "Entry : " << existing_logs << "\n";
+                            if(erase_file_at_path(existing_logs)){
+                                // par sécurité, on ne va pas ressayer de télécharger le log s'il n'a pas été supprimé
+                                // avec success au préalable.
+                                incomplete_entry_downloaded = true;
+                            }
                         }else{
                             //std::cout << "Log is complete \n";
                             incomplete_entry_downloaded = false;
@@ -217,6 +251,7 @@ void log_download_entry_list(std::vector<LogFiles::Entry> entry_list_to_download
         auto prom = std::promise<void>();
         auto fut = prom.get_future();
 
+        /*
         if(!is_in_the_list || incomplete_entry_downloaded){
             log_files->download_log_file_async(
                 entry,
@@ -233,10 +268,45 @@ void log_download_entry_list(std::vector<LogFiles::Entry> entry_list_to_download
                 });
 
                 fut.wait();
+        }*/
+
+
+        if(!is_in_the_list || incomplete_entry_downloaded){
+            log_files->download_log_file_async(
+                entry,
+                file_path_stream.str(),
+                [&prom](LogFiles::Result result, LogFiles::ProgressData progress_data) {
+                    if (result == LogFiles::Result::Next) {
+                        //std::cout << "Download progress: " << 100.0f * progress_data.progress << "\n";
+                    } else {
+
+                        if (result == LogFiles::Result::Success)
+                            std::cout << "Succeed to download missing logs\n";
+                        else
+                            std::cout << "Failed to download logs with error: " << result << "\n";
+
+                        prom.set_value();
+                    }
+                });
+
+                fut.wait();
         }
+    
+
     }
 
     return;
+}
+
+bool erase_file_at_path(std::string pathname){
+    if( remove(pathname.c_str()) != 0 ){
+        perror( "Error deleting file" );
+        return false;
+    } 
+    else{
+        puts( "File successfully deleted" );
+        return true;
+    }
 }
 
 std::streampos get_size_of_file_at_path(std::string filePath){
