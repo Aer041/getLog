@@ -1,5 +1,10 @@
 # getLog
 
+
+## Download log
+
+Go to `download_log_auto` folder then: 
+
 On local
 ```
 ./download_log_auto serial:///dev/ttyACM0
